@@ -39,7 +39,7 @@ function newGrid () {
         }
         }
 
-    let boxWidth = 661.28 / int
+    let boxWidth = 640 / int
     const allBoxes = Array.from(document.querySelectorAll('.block'))
 
     for (element of allBoxes) {
