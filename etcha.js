@@ -47,8 +47,9 @@ function newGrid () {
 
         element.style.width = `${boxWidth}px`;
         element.style.height = `${boxWidth}px`;
-
+        element.addEventListener('mouseover', (event) => event.target.style.backgroundColor = 'blue')
     }
 
 
 }
+
