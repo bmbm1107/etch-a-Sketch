@@ -3,13 +3,13 @@ const btnNewGrid = document.querySelector('button')
 
 btnNewGrid.addEventListener('click', newGrid)
 
-for (let i = 0; i <= 16; i++){
+for (let i = 0; i < 16; i++){
 const column = document.createElement('div')
 column.classList.add('horizontal')
 container.appendChild(column)
 
 
-for (let i = 0; i <= 16; i++){
+for (let i = 0; i < 16; i++){
 const square = document.createElement('div')
 square.classList.add('block')
 column.appendChild(square)
@@ -18,9 +18,9 @@ column.appendChild(square)
 
 function newGrid () {
 
-   let allBlock = Array.from(document.querySelectorAll('.container *'))
+   const allAxes = Array.from(document.querySelectorAll('.container *'))
 
-    for (element of allBlock) {
+    for (element of allAxes) {
         element.remove()
     }
 
@@ -38,5 +38,17 @@ function newGrid () {
         column.appendChild(square)
         }
         }
+
+    let boxWidth = 661.28 / int
+    const allBoxes = Array.from(document.querySelectorAll('.block'))
+
+    for (element of allBoxes) {
+        console.log(element)
+
+        element.style.width = `${boxWidth}px`;
+        element.style.height = `${boxWidth}px`;
+
+    }
+
 
 }
